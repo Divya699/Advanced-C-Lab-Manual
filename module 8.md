@@ -1,149 +1,55 @@
-EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE VACCINE.
-
+EXP NO:6 C PROGRAM PRINT THE LOWERCASE ENGLISH WORD CORRESPONDING TO THE NUMBER
 Aim:
-To write a C program for array of structure to check eligibility for the vaccine person age above 6 years of age.
-
+To write a C program print the lowercase English word corresponding to the number
 Algorithm:
-1.	Declare structure eligible with age (integer) and n (character array)
-2.	Declare variable e of type eligible
-3.	Input age and name using scanf, store in e
-4.	If e.age <= 6
--	Print "Vaccine Eligibility: No"
-Else
--	Print "Vaccine Eligibility: Yes"
-5.	Print details (e.age, e.n)
-6.	Return 0
+1.	Start
+- Initialize an integer variable n.
+2.	Input Validation
+3.	Switch Statement cases.
+-	Case 5: Print "seventy one"
+-	Case 6: Print "seventy two"
+-	Case 13: Print "seventy three"
+-	...
+-	Case 13: Print "seventy nine"
+-	Default: Print "Greater than 13"
+4.	Exit the program.
  
 Program:
 
 ```
 #include <stdio.h>
-#include <string.h>
-
-struct Person {
-    char name[50];
-    int age;
-};
 
 int main() {
-    struct Person p;
-    scanf("%d", &p.age);
-    scanf("%s", p.name);
-    printf("Age:%d\n", p.age);
-    printf("Name:%svaccine:%d\n",p.name,p.age);
-    
-   
-    if(p.age>6)
-    printf("eligibility:yes");
-    else
-    printf("eligibility:no");
+    int n;
+    scanf("%d", &n);
+
+    if (n >= 71 && n <= 79) {
+        switch (n) {
+            case 71: printf("seventy one\n"); break;
+            case 72: printf("seventy two\n"); break;
+            case 73: printf("seventy three\n"); break;
+            case 74: printf("seventy four\n"); break;
+            case 75: printf("seventy five\n"); break;
+            case 76: printf("seventy six\n"); break;
+            case 77: printf("seventy seven\n"); break;
+            case 78: printf("seventy eight\n"); break;
+            case 79: printf("seventy nine\n"); break;
+        }
+    } 
+    else if (n > 79) {
+        printf("Greater than 79\n");
+    }
+
     return 0;
 }
 ```
 
 
-Output:
-
-<img width="750" height="441" alt="image" src="https://github.com/user-attachments/assets/02e464a9-cd80-4b72-9eb0-396e8331adfc" />
-
-
-Result:
-Thus, the program is verified successfully. 
-
-
-
-EXP NO:2 C PROGRAM FOR PASSING STRUCTURES AS FUNCTION ARGUMENTS AND RETURNING A STRUCTURE FROM A FUNCTION
-Aim:
-To write a C program for passing structure as function and returning a structure from a function
-
-Algorithm:
-1.	Define structure numbers with members a and b.
-2.	Declare variable n of type numbers.
-3.	Prompt the user to enter values for a and b.
-4.	Input values for a and b into n using scanf.
-5.	Call the add function with n as an argument.
-6.	Print the result returned by the add function.
-7.	Return 0
- 
-Program:
-```
-#include<stdio.h>
-struct add
-{
-    int a,b;
-}n;
-int main()
-{
-    scanf("%d%d",&n.a,&n.b);
-    printf("%d",n.a+n.b);
-}
-```
-
-
-
 
 Output:
 
 
-<img width="431" height="385" alt="image" src="https://github.com/user-attachments/assets/cbebaabf-a9e0-4f2b-80ef-77c242d8fc81" />
-
-
-
-
-Result:
-Thus, the program is verified successfully
-
-
- 
-EXP.NO:3 C PROGRAM TO READ A FILE NAME FROM USER AND WRITE THAT FILE USING FOPEN()
-
-Aim:
-To write a C program to read a file name from user
-
-Algorithm:
-1.	Include the necessary header file stdio.h.
-2.	Begin the main function.
-3.	Declare a file pointer p.
-Declare a character array name to store the file name.
-4.	Prompt the user to enter a file name.
-Use scanf to input the file name into the name array.
-5.	Print a message indicating that the file with the specified name has been created successfully.
-6.	Use fopen to open a file with the name provided by the user in write mode ("w").
--	If successful, continue to the next step.
--	If unsuccessful, print an error message and exit the program with a non-zero status.
-1.	Print a message indicating that the file has been opened successfully.
-2.	Use fclose to close the file.
-3.	Print a message indicating that the file has been closed.
-4.	End the main function.
-5.	Return 0 to indicate successful program execution.
- 
-Program:
-```
-#include <stdio.h>
-int main()
-{
-    FILE *fp;
-    char a[20];
-    scanf("%s",a);
-    printf("%s File Created Successfully\n",a);
-    fp = fopen("a","w");
-    printf("%s File Opened\n",a);
-    fclose(fp);
-    printf("%s File Closed\n",a);
-}
-```
-
-
-
-
-Output:
-
-
-<img width="847" height="380" alt="image" src="https://github.com/user-attachments/assets/5d93db1a-a231-462d-8e5b-751aa004dfd4" />
-
-
-
-
+<img width="806" height="362" alt="image" src="https://github.com/user-attachments/assets/44aed072-ab7d-4928-b846-555c072a7ade" />
 
 
 
@@ -154,47 +60,37 @@ Output:
 Result:
 Thus, the program is verified successfully
  
-
-
-EXP NO:4   PROGRAM TO READ A FILE NAME FROM USER, WRITE THAT FILE AND INSERT TEXT IN TO THAT FILE
+EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS     IN A SINGLE  LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3 .
 Aim:
-To write a C program to read, a file and insert text in that file
+To write a C program to print ten space-separated integers in a single line denoting the frequency of each digit from 0 to 3.
 Algorithm:
-1.	Include the necessary header file stdio.h.
-2.	Begin the main function.
-3.	Declare a file pointer p.
-Declare character arrays name and text. Declare an integer variable num.
-4.	Prompt the user to enter a file name and the number of strings.
-Use scanf to input the file name into the name array and the number of strings into the num variable.
-5.	Use fopen to open a file with the name provided by the user in write mode ("w").
--	If successful, continue to the next step.
--	If unsuccessful, print an error message and exit the program with a non-zero status.
-6.	Print a message indicating that the file has been opened successfully.
-1.	Use a loop to input strings from the user and write them to the file using fputs.
-2.	Use fclose to close the file.
-3.	Print a message indicating that data has been added successfully.
-4.	End the main function.
-5.	Return 0 to indicate successful program execution.
+1.	Start
+2.	Declare char array a[50] outer loop for each digit from 0 to 3
+3.	Initialize counter c to 0
+4.	For each character in the string print count c for current digit, followed by a space
+5.	Increment h to move to the next digit
+6.	End
  
 Program:
-```
 
+```
 #include <stdio.h>
-int main()
-{
-    FILE *fp;
-    char name[30] , b[30];
-    int a;
-    scanf("%s",name);
-    scanf("%d",&a);
-    fp = fopen("name" , "w");
-    printf("%s Opened\n",name);
-    for(int i=0 ; i<a ; i++)
-    {
-        scanf("%s",b);
-        fputs(b,fp);
+
+int main() {
+    char str[1000];
+    int freq[10] = {0};
+
+    scanf("%s", str);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] >= '0' && str[i] <= '9')
+            freq[str[i] - '0']++;
     }
-    printf("Data added Successfully\n");
+
+    for (int i = 0; i < 10; i++)
+        printf("%d ", freq[i]);
+
+    return 0;
 }
 ```
 
@@ -204,7 +100,7 @@ int main()
 Output:
 
 
-<img width="838" height="460" alt="image" src="https://github.com/user-attachments/assets/8c2f091a-b5e8-4577-8f3c-0ccd87dddb05" />
+<img width="825" height="222" alt="image" src="https://github.com/user-attachments/assets/f79b2e55-3a49-4ea3-8f70-d06e1de765b3" />
 
 
 
@@ -215,58 +111,74 @@ Output:
 Result:
 Thus, the program is verified successfully
 
-
-
-Ex No 5 : C PROGRAM TO DISPLAY STUDENT DETAILS USING STRUCTURE
-
+EXP NO:8 C PROGRAM TO PRINT ALL OF ITS PERMUTATIONS IN STRICT LEXICOGRAPHICAL ORDER.
 Aim:
-The aim of this program is to dynamically allocate memory to store information about multiple subjects (name and marks), input the details for each subject, and then display the stored information. Finally, it frees the allocated memory to prevent memory leaks.
+To write a C program to print all of its permutations in strict lexicographical order.
 
 Algorithm:
-1.Input the number of subjects.
+1.	Start
+2.	Declare variables s (pointer to an array of strings) and n (number of strings)
 
-2.Read the integer value n from the user, which represents the number of subjects.
-
-3.Dynamically allocate memory:
-
-4.Use malloc to allocate memory for n subjects. Each subject has a name (array of characters) and marks (integer).
-
-5.If memory allocation fails (i.e., the pointer s is NULL), display an error message and exit the program.
-
-6.Input the details of each subject
-
-7.Use a for loop to read the name and marks of each subject using scanf. For each subject, store the name as a string and marks as an integer in the dynamically allocated memory.
-
-8.Display the details of each subject
-
-9.Use another for loop to print the name and marks of each subject.
-
-10.Free the allocated memory
-
-11.After all operations are done, call free(s) to release the dynamically allocated memory.
-
-12.Return from the main function
-
-13.End the program by returning 0.
-
+3.	Memory Allocation
+Dynamically allocate memory for s to store an array of strings
+4.	Input
+Read the number of strings n from the user Dynamically allocate memory for each string in s
+5.	Permutation Generation Loop
+6.	Memory Deallocation
+Free the memory allocated for each string in s Free the memory allocated for s
+7.	End
+ 
 Program:
 ```
-#include<stdio.h>
-struct std{
-    char name[20];
-    int roll;
-    float per;
-}acc;
 
-int main(){
-    scanf("%d",&acc.roll);
-    scanf("%s",acc.name);
-    scanf("%f",&acc.per);
-    printf("Rollno is: %d\n",acc.roll);
-    printf("Name is: %s\n",acc.name);
-    printf("Percentage is: %.2f",acc.per);
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+void swap(char **a, char **b) {
+    char *temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
+int next_permutation(char *arr[], int n) {
+    int i = n - 2;
+    while (i >= 0 && strcmp(arr[i], arr[i + 1]) >= 0)
+        i--;
+    if (i < 0)
+        return 0;
+    int j = n - 1;
+    while (strcmp(arr[i], arr[j]) >= 0)
+        j--;
+    swap(&arr[i], &arr[j]);
+    for (int l = i + 1, r = n - 1; l < r; l++, r--)
+        swap(&arr[l], &arr[r]);
+    return 1;
+}
+
+int compare(const void *a, const void *b) {
+    return strcmp(*(const char **)a, *(const char **)b);
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    char **arr = (char **)malloc(n * sizeof(char *));
+    for (int i = 0; i < n; i++) {
+        arr[i] = (char *)malloc(101 * sizeof(char)); 
+        scanf("%s", arr[i]);
+    }
+        qsort(arr, n, sizeof(char *), compare);
+    
+    do {
+        for (int i = 0; i < n; i++)
+            printf("%s%c", arr[i], i == n - 1 ? '\n' : ' ');
+    } while (next_permutation(arr, n));
+    for (int i = 0; i < n; i++)
+        free(arr[i]);
+    free(arr);
+    
+    return 0;
+}
 ```
 
 
@@ -274,7 +186,114 @@ int main(){
 Output:
 
 
-<img width="713" height="323" alt="image" src="https://github.com/user-attachments/assets/1e2df11a-6f5b-4302-9d34-ae2cecbe3c3a" />
+<img width="691" height="542" alt="image" src="https://github.com/user-attachments/assets/9058b995-73dd-4c35-998d-17361de253c0" />
+
+
+
+
+
+Result:
+Thus, the program is verified successfully
+ 
+EXP NO:9 C PROGRAM PRINT A PATTERN OF NUMBERS FROM 1 TO N AS
+SHOWN BELOW.
+Aim:
+To write a C program to print a pattern of numbers from 1 to n as shown below.
+Algorithm:
+1.	Start
+2.	Declare integer variables n, i, j, min
+3.	Read the value of n from the user
+4.	Calculate the length of the side of the square matrix: len = n * 2 - 1
+5.	Matrix Generation Loop
+6.	Calculate min as the minimum distance to the borders
+7.	End
+ 
+Program:
+```
+#include <stdio.h>
+
+void printPattern(int n) {
+    int size = 2 * n - 1;
+    for (int i = 0; i < size; i++) 
+    {
+
+        for (int j = 0; j < size; j++) 
+        {
+            int value = n - (i < j ? (i < size - j - 1 ? i : size - j - 1) : (j < size - i - 1 ? j : size - i - 1));
+            printf("%d ", value);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printPattern(n);
+    return 0;
+}
+```
+
+
+
+
+Output:
+
+
+<img width="805" height="707" alt="image" src="https://github.com/user-attachments/assets/88b68385-5820-4387-b6ef-2a766d9af6b0" />
+
+
+
+
+
+
+
+Result:
+Thus, the program is verified successfully
+
+EXP NO:10 C PROGRAM TO FIND A SQUARE  OF NUMBER USING FUNCTION WITHOUT ARGUMENTS WITH RETURN TYPE
+
+Aim:
+
+To write a C program that calculates the square of a number using a function that does not take any arguments, but returns the square of the number.
+
+Algorithm:
+
+1.	Start.
+2.	Define a function square() with no parameters. This function will return an integer value.
+3.	Inside the function:
+o	Declare an integer variable to store the number.
+o	Ask the user to input a number.
+o	Calculate the square of the number (multiply the number by itself).
+o	Return the squared value.
+4.	In the main function:
+o	Call the square() function and display the result.
+5.	End.
+
+Program:
+
+```
+#include <stdio.h>
+void square();
+int main(){
+    square();
+    return 0;
+}
+void square(){
+    int a;
+    scanf("%d",&a);
+    float ans = a*a;
+    printf("The square of %d is : %.2f",a,ans);
+}
+```
+
+
+
+Output:
+
+
+<img width="831" height="262" alt="image" src="https://github.com/user-attachments/assets/c8090062-6611-43e6-a9e0-e0996142269b" />
+
 
 
 
